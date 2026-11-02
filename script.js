@@ -91,9 +91,46 @@ const LESSONS = [
   audio: "garnier-malet-aula-01-parte-01-bloco-03.mp3",
   durationLabel: "MP3",
   transcript: ""
-}
+},
+  
+  {
+    id: "garnier-malet-aula-01-parte-02-bloco-01",
+    title: "Futuros potenciais — Bloco 1",
+    department: "garnier-malet",
+    module: "Aula 01 • Parte 2 • Bloco 1",
+    audio: "garnier-malet-aula-01-parte-02-bloco-01.mp3",
+    durationLabel: "MP3",
+    transcript: ""
+  },
+  {
+    id: "garnier-malet-aula-01-parte-02-bloco-02",
+    title: "O duplo e a antecipação — Bloco 2",
+    department: "garnier-malet",
+    module: "Aula 01 • Parte 2 • Bloco 2",
+    audio: "garnier-malet-aula-01-parte-02-bloco-02.mp3",
+    durationLabel: "MP3",
+    transcript: ""
+  },
+  {
+    id: "garnier-malet-aula-01-parte-02-bloco-03",
+    title: "Decisões, liberdade e responsabilidade — Bloco 3",
+    department: "garnier-malet",
+    module: "Aula 01 • Parte 2 • Bloco 3",
+    audio: "garnier-malet-aula-01-parte-02-bloco-03.mp3",
+    durationLabel: "MP3",
+    transcript: ""
+  },
+  {
+    id: "garnier-malet-aula-01-parte-02-bloco-04",
+    title: "Memória, vieses e pensamento crítico — Bloco 4",
+    department: "garnier-malet",
+    module: "Aula 01 • Parte 2 • Bloco 4",
+    audio: "garnier-malet-aula-01-parte-02-bloco-04.mp3",
+    durationLabel: "MP3",
+    transcript: ""
+  }
+  ];
 
-    ];
 
 const STORAGE_KEY = "academiaMente.v1";
 const emptyState = {favorites:[],completed:[],progress:{},notes:[],playlists:[],history:[],totalListenedSeconds:0,lastLesson:null,recalls:[]};
