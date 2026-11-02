@@ -9,6 +9,18 @@ const DEPARTMENTS = [
  {id:"criatividade",name:"Inteligência, criatividade e linguagem",symbol:"✧",description:"Raciocínio, vocabulário, imaginação e comunicação."},
  {id:"economia",name:"Economia e bolsa de valores",symbol:"◫",description:"Mercados, investimentos e educação financeira."},
  {id:"filosofia",name:"Filosofia e ciência",symbol:"⌘",description:"Conhecimento, pensamento crítico e investigação."}
+ const DEPARTMENTS = [
+ {id:"garnier-malet",name:"Jean-Pierre Garnier-Malet",symbol:"◈",description:"Teorias e hipóteses sobre tempo e antecipação."},
+ {id:"tom-campbell",name:"Tom Campbell",symbol:"◎",description:"Consciência, experiência e modelos de realidade."},
+ {id:"my-big-toe",name:"My Big TOE",symbol:"◇",description:"Fundamentos, conceitos e análise crítica da teoria."},
+ {id:"jung",name:"Carl Gustav Jung",symbol:"☯",description:"Inconsciente, arquétipos, símbolos e individuação."},
+ {id:"neurociencia",name:"Neurociência",symbol:"⌬",description:"Cérebro, memória, atenção e aprendizagem."},
+ {id:"criatividade",name:"Inteligência, criatividade e linguagem",symbol:"✧",description:"Raciocínio, vocabulário, imaginação e comunicação."},
+ {id:"economia",name:"Economia e bolsa de valores",symbol:"◫",description:"Mercados, investimentos e educação financeira."},
+ {id:"filosofia",name:"Filosofia e ciência",symbol:"⌘",description:"Conhecimento, pensamento crítico e investigação."},
+ {id:"desenvolvimento-cognitivo",name:"Desenvolvimento Cognitivo",symbol:"🧠",description:"Atenção, concentração, memória, foco e aprendizagem."}
+
+ 
 ];
 // Adicione objetos neste formato. Não há aulas ou áudios fictícios cadastrados.
 
