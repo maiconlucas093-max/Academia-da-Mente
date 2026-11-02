@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d16">
+  <meta name="description" content="Academia da Mente: uma plataforma pessoal de aprendizagem, desenvolvimento intelectual e estudos por áudio.">
+  <meta property="og:title" content="Academia da Mente">
+  <meta property="og:description" content="Seu conhecimento. Sua evolução. Aprenda também enquanto vive seu dia.">
+  <meta property="og:type" content="website">
+  <title>Academia da Mente | Aprendizagem por áudio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" data-view="dashboard">
+        <span class="brand-mark">A<span>M</span></span>
+        <span><strong>ACADEMIA</strong><small>DA MENTE</small></span>
+      </a>
+      <div class="side-label">AMBIENTE DE ESTUDO</div>
+      <nav class="nav-list" aria-label="Navegação principal">
+        <button class="nav-item active" data-view="dashboard"><span>⌂</span> Visão geral</button>
+        <button class="nav-item" data-view="audio"><span>♫</span> Central de áudios</button>
+        <button class="nav-item" data-view="walking"><span>◉</span> Modo caminhada</button>
+        <button class="nav-item" data-view="departments"><span>▤</span> Departamentos</button>
+        <button class="nav-item" data-view="memory"><span>✧</span> Memória e atenção</button>
+        <button class="nav-item" data-view="notebook"><span>▧</span> Caderno de estudos</button>
+        <button class="nav-item" data-view="playlists"><span>☷</span> Minhas playlists</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="local-note"><span class="status-dot"></span><span>Versão inicial<br><small>Dados salvos neste dispositivo</small></span></div>
+        <button class="nav-item" data-view="settings"><span>⚙</span> Configurações</button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+        <div class="breadcrumb">ACADEMIA DA MENTE <span>/</span> <b id="crumb">Visão geral</b></div>
+        <div class="top-actions"><span class="date-label" id="todayLabel"></span><div class="avatar">M</div></div>
+      </header>
+
+      <section class="view active" id="view-dashboard">
+        <div class="welcome-row">
+          <div><p class="eyebrow">SEU ESPAÇO DE EVOLUÇÃO</p><h1>Conhecimento que acompanha <em>sua vida.</em></h1><p class="muted">Transforme caminhadas, tarefas e momentos cotidianos em oportunidades de aprendizagem.</p></div>
+          <div class="hero-symbol" aria-hidden="true">✧</div>
+        </div>
+        <div class="stats-grid">
+          <article class="stat-card"><span class="stat-icon">♫</span><small>Tempo de áudio ouvido</small><strong id="statTime">0 min</strong><span class="stat-foot">Tempo real de reprodução</span></article>
+          <article class="stat-card"><span class="stat-icon">✓</span><small>Aulas concluídas</small><strong id="statLessons">0</strong><span class="stat-foot">Marcadas após o estudo</span></article>
+          <article class="stat-card"><span class="stat-icon">♡</span><small>Aulas favoritas</small><strong id="statFavorites">0</strong><span class="stat-foot">Sua biblioteca pessoal</span></article>
+          <article class="stat-card"><span class="stat-icon">▧</span><small>Anotações</small><strong id="statNotes">0</strong><span class="stat-foot">Ideias registradas</span></article>
+        </div>
+        <div class="section-heading"><div><p class="eyebrow">CONTINUE DE ONDE PAROU</p><h2>Seu espaço de aprendizagem</h2></div><button class="text-btn" data-go="audio">Abrir biblioteca →</button></div>
+        <div class="continue-card">
+          <div class="continue-icon">♫</div><div class="continue-copy"><strong id="lastLessonTitle">Sua próxima aula começa aqui</strong><p id="lastLessonInfo">Adicione um arquivo MP3 para começar a estudar por áudio.</p></div>
+          <button class="primary-btn" data-go="audio">Explorar aulas</button>
+        </div>
+        <div class="section-heading"><div><p class="eyebrow">SUAS ÁREAS DE CONHECIMENTO</p><h2>Departamentos</h2></div><button class="text-btn" data-go="departments">Ver todos →</button></div>
+        <div class="department-grid" id="dashboardDepartments"></div>
+        <div class="tip-card"><span>✦</span><div><strong>Aprendizagem ativa</strong><p>Depois de ouvir uma aula, tente explicar com suas próprias palavras o que aprendeu. Recuperar uma ideia da memória ajuda a consolidar o conhecimento.</p></div></div>
+      </section>
+
+      <section class="view" id="view-audio">
+        <div class="page-heading"><p class="eyebrow">SUA BIBLIOTECA DE CONHECIMENTO</p><h1>Central de <em>áudios</em></h1><p class="muted">Organize suas aulas narradas e estude sem precisar ficar olhando para a tela.</p></div>
+        <div class="toolbar"><label class="search-box"><span>⌕</span><input id="audioSearch" type="search" placeholder="Buscar aula, tema ou departamento..."></label><select id="departmentFilter" aria-label="Filtrar departamento"><option value="">Todos os departamentos</option></select></div>
+        <div class="audio-layout"><div><div class="list-heading"><h2>Biblioteca</h2><span id="audioCount">0 aulas</span></div><div class="lesson-list" id="lessonList"></div></div>
+          <aside class="player-panel"><p class="eyebrow">REPRODUZINDO</p><div class="album-art">♫</div><h3 id="playerTitle">Escolha uma aula</h3><p id="playerDepartment" class="muted">Central de áudios</p>
+            <audio id="audioElement" preload="metadata"></audio>
+            <div class="progress-wrap"><input type="range" id="progressBar" min="0" max="100" value="0" aria-label="Progresso do áudio"><div class="time-row"><span id="currentTime">0:00</span><span id="duration">0:00</span></div></div>
+            <div class="player-controls"><button class="round-control" id="back15" aria-label="Voltar 15 segundos">↶<small>15</small></button><button class="play-control" id="playPause" aria-label="Reproduzir" disabled>▶</button><button class="round-control" id="forward15" aria-label="Avançar 15 segundos">↷<small>15</small></button></div>
+            <div class="player-extras"><label>Velocidade <select id="speedSelect"><option>0.75</option><option selected>1</option><option>1.25</option><option>1.5</option><option>1.75</option><option>2</option></select>x</label><button id="favoriteCurrent" class="text-btn">♡ Favoritar</button></div>
+            <button class="wide-btn" id="completeLesson" disabled>Marcar aula como concluída</button>
+            <p class="tiny-note">O progresso é registrado somente durante a reprodução real. A reprodução em segundo plano depende do navegador e do Android.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="view" id="view-walking">
+        <div class="walking-shell"><p class="eyebrow">APRENDA EM MOVIMENTO</p><h1>Modo <em>caminhada</em></h1><p class="muted">Controles simples para ouvir suas aulas durante atividades cotidianas.</p>
+          <div class="walking-card"><div class="walking-orbit">♫</div><p class="eyebrow" id="walkDepartment">CENTRAL DE ÁUDIOS</p><h2 id="walkTitle">Escolha uma aula na biblioteca</h2><p class="muted" id="walkStatus">Sua sessão de aprendizagem está pronta.</p>
+            <div class="walk-timer" id="walkElapsed">00:00</div><div class="walk-controls"><button id="walkBack" class="round-control">↶<small>15</small></button><button id="walkPlay" class="play-control" disabled>▶</button><button id="walkForward" class="round-control">↷<small>15</small></button></div>
+            <div class="walk-actions"><label>Duração da sessão<select id="sessionLength"><option value="15">15 minutos</option><option value="30">30 minutos</option><option value="45">45 minutos</option><option value="60">60 minutos</option></select></label><button class="primary-btn" id="startSession">Iniciar sessão</button><button class="outline-btn" id="endSession">Encerrar sessão</button></div>
+            <p class="tiny-note">A sessão mede o tempo decorrido enquanto esta página está ativa. Não substitui o controle de duração real do áudio.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="view-departments">
+        <div class="page-heading"><p class="eyebrow">UNIVERSIDADE PESSOAL</p><h1>Departamentos de <em>estudo</em></h1><p class="muted">Oito áreas para explorar conhecimento, desenvolver ideias e conectar disciplinas.</p></div>
+        <div class="department-grid department-grid-large" id="allDepartments"></div>
+      </section>
+
+      <section class="view" id="view-memory">
+        <div class="page-heading"><p class="eyebrow">TREINAMENTO COGNITIVO</p><h1>Memória e <em>atenção</em></h1><p class="muted">Pratique recuperação ativa, associação de ideias e observação consciente.</p></div>
+        <div class="feature-grid"><article class="feature-card"><span class="feature-symbol">✧</span><h2>Recuperação ativa</h2><p>Depois de ouvir uma aula, feche a transcrição e tente recordar três ideias centrais.</p><textarea id="recallAnswer" placeholder="Escreva o que você consegue lembrar..."></textarea><button class="primary-btn" id="saveRecall">Salvar reflexão</button></article><article class="feature-card"><span class="feature-symbol">◉</span><h2>Atenção ao momento</h2><p>Faça uma pausa breve. Observe sons, sensações e pensamentos sem tentar julgá-los.</p><button class="primary-btn" id="attentionStart">Iniciar exercício de 2 minutos</button><p id="attentionStatus" class="muted"></p></article></div>
+        <div class="tip-card"><span>✦</span><div><strong>Uma observação importante</strong><p>Os exercícios são práticas educativas, não testes clínicos nem instrumentos de diagnóstico ou medição de inteligência.</p></div></div>
+      </section>
+
+      <section class="view" id="view-notebook">
+        <div class="page-heading"><p class="eyebrow">REGISTRE SUAS DESCOBERTAS</p><h1>Caderno de <em>estudos</em></h1><p class="muted">Guarde perguntas, conceitos, conexões e reflexões que surgirem durante suas aulas.</p></div>
+        <div class="notebook-editor"><input id="noteTitle" placeholder="Título da anotação"><textarea id="noteBody" rows="6" placeholder="Escreva sua reflexão, conceito ou pergunta..."></textarea><button class="primary-btn" id="saveNote">Salvar anotação</button></div><div class="notes-list" id="notesList"></div>
+      </section>
+
+      <section class="view" id="view-playlists">
+        <div class="page-heading"><p class="eyebrow">SUA EXPERIÊNCIA, SEU RITMO</p><h1>Minhas <em>playlists</em></h1><p class="muted">Crie sequências de aulas para caminhadas, revisões e momentos de reflexão.</p></div>
+        <div class="playlist-create"><input id="playlistName" placeholder="Ex.: Neurociência para caminhadas"><button class="primary-btn" id="createPlaylist">Criar playlist</button></div><div id="playlistList" class="playlist-list"></div>
+      </section>
+
+      <section class="view" id="view-settings">
+        <div class="page-heading"><p class="eyebrow">PREFERÊNCIAS</p><h1>Configurações</h1><p class="muted">Gerencie os dados locais e consulte como adicionar suas aulas em MP3.</p></div>
+        <div class="settings-card"><h2>Adicionar aulas MP3</h2><p>Coloque os arquivos na pasta correspondente dentro de <code>aulas/</code> e cadastre seus metadados no arquivo <code>script.js</code>, na lista <code>LESSONS</code>. O caminho do áudio deve apontar para o arquivo real.</p><p>Exemplo: <code>aulas/jung/inconsciente.mp3</code></p></div>
+        <div class="settings-card"><h2>Armazenamento</h2><p>Esta versão guarda anotações, favoritos, playlists e progresso no armazenamento local do navegador deste dispositivo. Limpar os dados do navegador pode apagar essas informações.</p><button class="outline-btn" id="exportData">Exportar meus dados (JSON)</button></div>
+        <div class="settings-card"><h2>Próxima integração</h2><p>A arquitetura será conectada ao Supabase para autenticação, banco de dados, sincronização entre dispositivos e armazenamento de áudio. Nenhuma chave administrativa deve ser colocada no JavaScript público.</p></div>
+      </section>
+
+      <footer class="footer">ACADEMIA DA MENTE <span>•</span> Aprender é construir conexões.</footer>
+    </main>
+  </div>
+  <div class="mobile-player" id="mobilePlayer"><div><strong id="miniTitle">Nenhuma aula selecionada</strong><small id="miniState">Central de áudios</small></div><button id="miniPlay" aria-label="Reproduzir" disabled>▶</button></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
