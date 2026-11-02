@@ -62,10 +62,18 @@ const LESSONS = [
     module: "Aula 01 • Atenção • Bloco 3",
     audio: "atencao-aula-01-parte-03.mp3",
     durationLabel: "MP3",
-    transcript: ""
-  }
-];
-
+        transcript: ""
+    },
+    {
+      id: "atencao-aula-01-parte-04",
+      title: "Como recuperar a atenção depois de uma interrupção — Bloco 4",
+      department: "desenvolvimento-cognitivo",
+      module: "Aula 01 • Atenção • Bloco 4",
+      audio: "atencao-aula-01-parte-04.mp3",
+      durationLabel: "MP3",
+      transcript: ""
+    }
+    ];
 
 const STORAGE_KEY = "academiaMente.v1";
 const emptyState = {favorites:[],completed:[],progress:{},notes:[],playlists:[],history:[],totalListenedSeconds:0,lastLesson:null,recalls:[]};
