@@ -16,7 +16,17 @@ const DEPARTMENTS = [
 // Adicione objetos neste formato. Não há aulas ou áudios fictícios cadastrados.
 
 
+
 const LESSONS = [
+  {
+    id: "garnier-malet-aula-01-parte-01",
+    title: "O desdobramento do tempo — Parte 1",
+    department: "garnier-malet",
+    module: "Aula 01 • Parte 1",
+    audio: "aula-01-parte-01.mp3",
+    durationLabel: "MP3",
+    transcript: ""
+  },
   {
     id: "garnier-malet-aula-01-parte-02",
     title: "O desdobramento do tempo — Parte 2",
@@ -36,6 +46,7 @@ const LESSONS = [
     transcript: ""
   }
 ];
+
 
 
 const STORAGE_KEY = "academiaMente.v1";
