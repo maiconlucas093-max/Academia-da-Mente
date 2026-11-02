@@ -20,15 +20,6 @@ const DEPARTMENTS = [
 const LESSONS = [
   
   {
-    id: "garnier-malet-aula-01-parte-02",
-    title: "O desdobramento do tempo — Parte 2",
-    department: "garnier-malet",
-    module: "Aula 01 • Parte 2",
-    audio: "aula-01-parte-02.mp3",
-    durationLabel: "MP3",
-    transcript: ""
-  },
-  {
     id: "atencao-aula-01-parte-01",
     title: "O que é atenção e por que ela importa — Bloco 1",
     department: "desenvolvimento-cognitivo",
