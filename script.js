@@ -12,6 +12,7 @@ const DEPARTMENTS = [
 ];
 // Adicione objetos neste formato. Não há aulas ou áudios fictícios cadastrados.
 
+
 const LESSONS = [
   {
     id: "garnier-malet-aula-01-parte-01",
@@ -21,8 +22,18 @@ const LESSONS = [
     audio: "aula-01-parte-01.mp3",
     durationLabel: "MP3",
     transcript: ""
+  },
+  {
+    id: "garnier-malet-aula-01-parte-02",
+    title: "O desdobramento do tempo — Parte 2",
+    department: "garnier-malet",
+    module: "Aula 01 • Parte 2",
+    audio: "aula-01-parte-02.mp3",
+    durationLabel: "MP3",
+    transcript: ""
   }
 ];
+
 
 const STORAGE_KEY = "academiaMente.v1";
 const emptyState = {favorites:[],completed:[],progress:{},notes:[],playlists:[],history:[],totalListenedSeconds:0,lastLesson:null,recalls:[]};
