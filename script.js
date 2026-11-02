@@ -11,9 +11,19 @@ const DEPARTMENTS = [
  {id:"filosofia",name:"Filosofia e ciência",symbol:"⌘",description:"Conhecimento, pensamento crítico e investigação."}
 ];
 // Adicione objetos neste formato. Não há aulas ou áudios fictícios cadastrados.
+
 const LESSONS = [
- // {id:"jung-001",title:"Introdução à psicologia analítica",department:"jung",module:"Módulo 1",audio:"aulas/jung/introducao.mp3",durationLabel:"",transcript:""}
+  {
+    id: "garnier-malet-aula-01-parte-01",
+    title: "O desdobramento do tempo — Parte 1",
+    department: "garnier-malet",
+    module: "Aula 01 • Parte 1",
+    audio: "aula-01-parte-01.mp3",
+    durationLabel: "MP3",
+    transcript: ""
+  }
 ];
+
 const STORAGE_KEY = "academiaMente.v1";
 const emptyState = {favorites:[],completed:[],progress:{},notes:[],playlists:[],history:[],totalListenedSeconds:0,lastLesson:null,recalls:[]};
 let state = loadState(), currentLesson = null, sessionStartedAt = null, sessionInterval = null, attentionInterval = null, attentionRemaining = 120;
