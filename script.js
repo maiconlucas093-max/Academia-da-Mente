@@ -44,7 +44,7 @@ const LESSONS = [
     audio: "atencao-aula-01-parte-01.mp3",
     durationLabel: "MP3",
     transcript: ""
-  }
+  },
   
     {
     id: "atencao-aula-01-parte-01",
