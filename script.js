@@ -9,7 +9,7 @@ const DEPARTMENTS = [
  {id:"criatividade",name:"Inteligência, criatividade e linguagem",symbol:"✧",description:"Raciocínio, vocabulário, imaginação e comunicação."},
  {id:"economia",name:"Economia e bolsa de valores",symbol:"◫",description:"Mercados, investimentos e educação financeira."},
  {id:"filosofia",name:"Filosofia e ciência",symbol:"⌘",description:"Conhecimento, pensamento crítico e investigação."}
- const DEPARTMENTS = [
+ 
  {id:"garnier-malet",name:"Jean-Pierre Garnier-Malet",symbol:"◈",description:"Teorias e hipóteses sobre tempo e antecipação."},
  {id:"tom-campbell",name:"Tom Campbell",symbol:"◎",description:"Consciência, experiência e modelos de realidade."},
  {id:"my-big-toe",name:"My Big TOE",symbol:"◇",description:"Fundamentos, conceitos e análise crítica da teoria."},
@@ -19,28 +19,26 @@ const DEPARTMENTS = [
  {id:"economia",name:"Economia e bolsa de valores",symbol:"◫",description:"Mercados, investimentos e educação financeira."},
  {id:"filosofia",name:"Filosofia e ciência",symbol:"⌘",description:"Conhecimento, pensamento crítico e investigação."},
  {id:"desenvolvimento-cognitivo",name:"Desenvolvimento Cognitivo",symbol:"🧠",description:"Atenção, concentração, memória, foco e aprendizagem."}
-
- 
 ];
 // Adicione objetos neste formato. Não há aulas ou áudios fictícios cadastrados.
 
 
 const LESSONS = [
   {
-    id: "garnier-malet-aula-01-parte-01",
-    title: "O desdobramento do tempo — Parte 1",
-    department: "garnier-malet",
-    module: "Aula 01 • Parte 1",
-    audio: "aula-01-parte-01.mp3",
-    durationLabel: "MP3",
-    transcript: ""
-  },
-  {
     id: "garnier-malet-aula-01-parte-02",
     title: "O desdobramento do tempo — Parte 2",
     department: "garnier-malet",
     module: "Aula 01 • Parte 2",
     audio: "aula-01-parte-02.mp3",
+    durationLabel: "MP3",
+    transcript: ""
+  },
+  {
+    id: "atencao-aula-01-parte-01",
+    title: "Como funciona a atenção humana — Parte 1",
+    department: "desenvolvimento-cognitivo",
+    module: "Aula 01 • Parte 1",
+    audio: "atencao-aula-01-parte-01.mp3",
     durationLabel: "MP3",
     transcript: ""
   }
