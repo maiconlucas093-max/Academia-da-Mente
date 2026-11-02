@@ -72,7 +72,16 @@ const LESSONS = [
       audio: "atencao-aula-01-parte-04.mp3",
       durationLabel: "MP3",
       transcript: ""
-    }
+    },
+    {
+  id: "atencao-aula-01-parte-05",
+  title: "Exercícios práticos para desenvolver a atenção — Bloco 5",
+  department: "desenvolvimento-cognitivo",
+  module: "Aula 01 • Atenção • Bloco 5",
+  audio: "atencao-aula-01-parte-05.mp3",
+  durationLabel: "MP3",
+  transcript: ""
+}
     ];
 
 const STORAGE_KEY = "academiaMente.v1";
