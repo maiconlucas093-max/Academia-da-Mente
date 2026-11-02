@@ -38,9 +38,9 @@ const LESSONS = [
   },
   {
     id: "atencao-aula-01-parte-01",
-    title: "Como funciona a atenção humana — Parte 1",
+    title: "O que é atenção e por que ela importa — Bloco 1",
     department: "desenvolvimento-cognitivo",
-    module: "Aula 01 • Parte 1",
+    module: "Aula 01 • Atenção • Bloco 1",
     audio: "atencao-aula-01-parte-01.mp3",
     durationLabel: "MP3",
     transcript: ""
