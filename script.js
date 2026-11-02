@@ -54,9 +54,17 @@ const LESSONS = [
   audio: "atencao-aula-01-parte-02.mp3",
   durationLabel: "MP3",
   transcript: ""
-}
+},
+  {
+    id: "atencao-aula-01-parte-03",
+    title: "Distrações externas e internas — Bloco 3",
+    department: "desenvolvimento-cognitivo",
+    module: "Aula 01 • Atenção • Bloco 3",
+    audio: "atencao-aula-01-parte-03.mp3",
+    durationLabel: "MP3",
+    transcript: ""
+  }
 ];
-
 
 
 const STORAGE_KEY = "academiaMente.v1";
