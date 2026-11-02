@@ -81,7 +81,35 @@ const LESSONS = [
   audio: "atencao-aula-01-parte-05.mp3",
   durationLabel: "MP3",
   transcript: ""
+},
+{
+  id: "garnier-malet-aula-01-parte-01-bloco-01",
+  title: "Fundamentos da teoria — Bloco 1",
+  department: "garnier-malet",
+  module: "Aula 01 • Parte 1 • Bloco 1",
+  audio: "garnier-malet-aula-01-parte-01-bloco-01.mp3",
+  durationLabel: "MP3",
+  transcript: ""
+},
+{
+  id: "garnier-malet-aula-01-parte-01-bloco-02",
+  title: "O duplo e a antecipação — Bloco 2",
+  department: "garnier-malet",
+  module: "Aula 01 • Parte 1 • Bloco 2",
+  audio: "garnier-malet-aula-01-parte-01-bloco-02.mp3",
+  durationLabel: "MP3",
+  transcript: ""
+},
+{
+  id: "garnier-malet-aula-01-parte-01-bloco-03",
+  title: "Escalas temporais e pensamento crítico — Bloco 3",
+  department: "garnier-malet",
+  module: "Aula 01 • Parte 1 • Bloco 3",
+  audio: "garnier-malet-aula-01-parte-01-bloco-03.mp3",
+  durationLabel: "MP3",
+  transcript: ""
 }
+
     ];
 
 const STORAGE_KEY = "academiaMente.v1";
